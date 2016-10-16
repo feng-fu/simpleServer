@@ -1,0 +1,4 @@
+#!/usr/bin/env node
+console.log("说明：")
+console.log("----cd 到需要开启服务器的目录----")
+console.log("----输入simpleServer，开启服务器----")

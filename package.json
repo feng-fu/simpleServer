@@ -1,10 +1,11 @@
 {
   "name": "serversimple",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a simple Node Server",
   "main": "index.js",
   "bin": {
-    "simpleServer": "./bin/server"
+    "simpleServer": "./bin/server",
+    "serversimple": "./bin/init"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -15,4 +15,10 @@ cd the path you want open server
 simpleServer
 ```
 
+#### View guide
+
+```JavaScript
+serversimple
+```
+
 ### Enjoy
