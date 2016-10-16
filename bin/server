@@ -1,0 +1,43 @@
+#!/usr/bin/env node
+var http = require("http")
+var fs = require("fs")
+var Url = require('url')
+var exec = require('child_process').exec;
+var server = http.createServer(function(request,response){
+  var path = Url.parse(request.url).pathname;
+  if(path[path.length - 1] === "/"){
+    path += "index.html"
+  }
+  path = path.substr(1);
+  if(fs.existsSync(path)){
+    fs.readFile(path,function(error,content){
+      if(error){
+        response.writeHead(500);
+        response.end();
+      }else{
+        response.writeHead(200);
+        var contentStr = content.toString();
+        response.write(content);
+        response.end();
+      }
+    })
+  }else{
+    response.writeHead(404);
+    response.end();
+  }
+  
+})
+
+server.listen(1234);
+var url = 'http://127.0.0.1:1234';
+switch(process.platform){
+  case "darwin":
+    exec('open ' + url);
+    break;
+  case 'win32':
+    exec('start ' + url);
+    break;
+  default:
+    exec('xdg-open ',[url]);
+}
+console.log("服务器运行在 http://127.0.0.1:1234")

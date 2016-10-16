@@ -1,0 +1,22 @@
+{
+  "name": "serversimple",
+  "version": "1.0.0",
+  "description": "a simple Node Server",
+  "main": "index.js",
+  "bin": {
+    "simpleServer": "./bin/server"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/feng-fu/simpleServer.git"
+  },
+  "author": "duocai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/feng-fu/simpleServer/issues"
+  },
+  "homepage": "https://github.com/feng-fu/simpleServer#readme"
+}
