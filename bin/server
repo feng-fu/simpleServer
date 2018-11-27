@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-var http = require("http")
-var fs = require("fs")
-var Url = require('url')
+var http = require("http");
+var fs = require("fs");
+var Url = require('url');
 var exec = require('child_process').exec;
 var server = http.createServer(function(request,response){
   var path = Url.parse(request.url).pathname;
