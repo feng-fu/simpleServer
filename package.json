@@ -1,6 +1,6 @@
 {
   "name": "serversimple",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "a simple Node Server",
   "main": "index.js",
   "bin": {
